@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Maryam Bestie</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #fff0f5; margin: 0; overflow: hidden; }
+        .page { display: none; height: 100vh; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+        .active { display: flex; }
+        h1 { color: #d63384; font-size: 40px; }
+        p { font-size: 20px; color: #555; max-width: 500px; }
+        .btn { background: #ff4d94; color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 18px; cursor: pointer; margin-top: 20px; }
+        .cat-img { width: 250px; height: 250px; border-radius: 20px; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.2); object-fit: cover; }
+        .lyrics { background: white; padding: 20px; border-radius: 15px; border-left: 5px solid #ff4d94; text-align: left; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <div class="page active" id="p1">
+        <h1>Happy Birthday Maryam! 🎂</h1>
+        <img src="https://cataas.com/cat/funny" class="cat-img">
+        <p>To my childhood bestie... ready for a surprise?</p>
+        <button class="btn" onclick="go(2)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p2">
+        <h1>Childhood Besties! 👶</h1>
+        <img src="https://cataas.com/cat/cute" class="cat-img">
+        <p>Hum bachpan se saath hain, aur ye dosti hamesha rahegi!</p>
+        <button class="btn" onclick="go(3)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p3">
+        <h1>Funny Cat Mood 😂</h1>
+        <img src="https://cataas.com/cat/jump" class="cat-img">
+        <p>Literally us when we start acting crazy!</p>
+        <button class="btn" onclick="go(4)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p4">
+        <h1>Then vs Now 👑</h1>
+        <div style="display:flex; gap:20px; font-size:40px;">
+            <div>👶<br><small style="font-size:15px">Little</small></div>
+            <div>➜</div>
+            <div>👸<br><small style="font-size:15px">Queen</small></div>
+        </div>
+        <p>You've always been the best!</p>
+        <button class="btn" onclick="go(5)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p5">
+        <h1>Inside Joke 🤐</h1>
+        <div class="lyrics">"Wo school wala kissa yaad hai? Jo sirf humein pata hai!"</div>
+        <button class="btn" onclick="go(6)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p6">
+        <h1>Bestie Quiz 🧐</h1>
+        <p>Who is the most nakchari? (Spoiler: It's you Maryam!)</p>
+        <button class="btn" onclick="go(7)">Next ➜</button>
+    </div>
+
+    <div class="page" id="p7">
+        <h1>My Message ❤️</h1>
+        <p>"I'm so lucky to have a childhood friend like you. Love you bestie!"</p>
+        <button class="btn" onclick="go(8)">Last Page ➜</button>
+    </div>
+
+    <div class="page" id="p8">
+        <h1>Sing Along! 🎵</h1>
+        <div class="lyrics">
+            Baar baar din yeh aaye,<br>
+            Baar baar dil yeh gaaye,<br>
+            Tu jiye hazaaron saal,<br>
+            <b>Happy Birthday to Maryam! 🎂</b>
+        </div>
+        <button class="btn" onclick="go(1)">Restart ❤️</button>
+    </div>
+
+    <script>
+        function go(n) {
+            // Sab pages ko hide karo
+            var pages = document.getElementsByClassName('page');
+            for(var i=0; i<pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            // Sirf selected page dikhao
+            document.getElementById('p'+n).classList.add('active');
+        }
+    </script>
+</body>
+</html>x
